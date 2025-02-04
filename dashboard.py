@@ -162,3 +162,5 @@ for bar in bars2:
                  xytext=(0, 5), textcoords="offset points", ha='center', fontsize=10, color='black')
 
 st.pyplot(fig2)
+
+#ini evaa
