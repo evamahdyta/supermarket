@@ -94,6 +94,13 @@ y_pred_knn = knn.predict(X_test)
 
 rmse_knn, accuracy_knn = calculate_metrics(y_test, y_pred_knn)
 
+# Simpan trained model menggunakan pickle
+model_path = "trained_knn_model.pkl"
+with open(model_path, 'wb') as model_file:
+    pickle.dump(knn, model_file)
+
+st.success("Data berhasil diprediksi")
+
 # Visualisasi Distribusi Produk
 st.subheader("Distribusi Produk")
 fig, ax = plt.subplots(figsize=(8, 6))
